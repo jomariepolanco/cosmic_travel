@@ -1,0 +1,22 @@
+<h1>Scientists</h1>
+<h2><%= link_to "Become a Scientist Today", new_scientist_path %></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Field Of Study</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scientists.each do |scientist| %>
+      <tr>
+        <td><%= scientist.name %></td>
+        <td><%= scientist.field_of_study %></td>
+        <td><%= link_to 'Show', scientist %></td>
+        <td><%= button_to 'Delete Scientist', scientist_path(scientist), method: :delete %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

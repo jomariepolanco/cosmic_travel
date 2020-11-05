@@ -1,0 +1,20 @@
+<p>
+  <strong>Name:</strong>
+  <%= @scientist.name %>
+</p>
+
+<p>
+  <strong>Field of Study </strong>
+  <%= @scientist.field_of_study %>
+</p>
+
+<h3>Planets: </h3>
+<ul>
+    <% @scientist.missions.each do |mission| %>
+        <li><%= link_to mission.planet.name, planet_path(mission.planet) %> Planet (<%= mission.name %> Mission)</li>
+    <% end %>
+</ul>
+
+<hr>
+<%= link_to 'Back to Planets', planets_path %><br>
+<%= link_to 'Edit Scientist', edit_scientist_path %>

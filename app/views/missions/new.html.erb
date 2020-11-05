@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <%= error %><p>
+    <% end %>
+<% end %>
+<%= form_for @mission do |f| %>
+    <%= f.label :name %><Br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :planet_id %><br>
+    <%= f.collection_select :planet_id, @planets, :id, :name %><br>
+
+    <%= f.label :scientist_id %><br>
+    <%= f.collection_select :scientist_id, @scientists, :id, :name %><br>
+
+    <%= f.submit %>
+<% end %>

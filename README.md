@@ -39,11 +39,11 @@ Planet
 
     <!-- - A user should be able to delete a scientist -->
 
-    - A user should be able to create a new mission by choosing a scientist and a planet from dropdown menus.
-        - A mission must have a unique name, a scientist, and a planet.
+    <!-- - A user should be able to create a new mission by choosing a scientist and a planet from dropdown menus.
+        <!-- - A mission must have a unique name, a scientist, and a planet. -->
         - After the mission is created, the user should be redirect to the scientist's detail page
         - Check that this is working correctly by verifying the new planet appears on the scientist's detail page
-        
+         -->
     scientists
         - ✅index
         -✅show
@@ -51,4 +51,4 @@ Planet
         -✅edit and update
         - ✅delete
     mission
-        - new and create
+        - ✅new and create
